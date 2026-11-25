@@ -1,0 +1,14 @@
+Self-hosted on-device OCR for ETS Prototype 2. These files are included in the
+application package so recognition can run in the browser with no CDN and no
+external OCR service.
+
+Pinned versions (downloaded from the npm registry, then served from this origin only):
+- tesseract.js 7.0.0 — Apache License 2.0
+- tesseract.js-core 7.0.0 — Apache License 2.0
+  iPhone / service-worker precache uses tesseract-core-lstm.wasm.js.
+  tesseract-core-simd-lstm.wasm.js and tesseract-core-relaxedsimd-lstm.wasm.js
+  are hosted for browsers that support those cores; they are not precached.
+- @tesseract.js-data/eng 1.0.0 (4.0.0_best_int/eng.traineddata.gz) — MIT
+
+See TESSERACT-JS-LICENSE.md, TESSERACT-CORE-LICENSE, tesseract.min.js.LICENSE.txt,
+and worker.min.js.LICENSE.txt.
